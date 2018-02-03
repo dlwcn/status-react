@@ -131,9 +131,7 @@
 (handlers/register-handler-fx
   :create-new-account-handler
   (fn [_ _]
-    {:dispatch-n [[:initialize-db]
-                  [:load-accounts]
-                  [:check-console-chat true]]}))
+    {:dispatch [:check-console-chat true]}))
 
 (handlers/register-handler-fx
   :load-accounts
